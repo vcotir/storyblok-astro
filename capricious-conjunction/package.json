@@ -1,0 +1,17 @@
+{
+  "name": "capricious-conjunction",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@storyblok/astro": "^2.5.11",
+    "astro": "^2.10.12",
+    "vite": "^4.4.9"
+  }
+}
