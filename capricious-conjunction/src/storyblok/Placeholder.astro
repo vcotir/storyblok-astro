@@ -1,0 +1,12 @@
+---
+// Credits to https://github.com/edv-ns
+import { storyblokEditable } from "@storyblok/astro";
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class="p-5 bg-red text-white">
+    The component <b>{blok.component}</b> is not yet implemented
+  </div>
+</div>

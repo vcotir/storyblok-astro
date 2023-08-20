@@ -4,9 +4,18 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const storyblokApi = useStoryblokApi(); // initializes new client instance using integration config
 
-const { data } = await storyblokApi.get("cdn/stories/test-post", {
-  version: import.meta.env.DEV ? "draft" : "published",
-});
+var data;
+try {
+  console.log(storyblokApi);
+  var res = await storyblokApi.get("cdn/stories/astro-is-amazing", {
+    // version: import.meta.env.DEV ? "draft" : "published",
+    version: "published",
+  });
+  data = res.data;
+  console.log(res);
+} catch (e) {
+  console.log("ERROR", e);
+}
 
 const content = data.story.content;
 ---
